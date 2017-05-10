@@ -1,0 +1,163 @@
+
+/*This is the CSS page which beautifies all the HTML coding done in the 5 HTML5 pages*/
+body{   /*This is the body section of all the pages */
+background-image:url(../Images/pizza1.jpg);
+background-size:cover;
+background-repeat:no-repeat;
+}
+header{    /*This is the header section of the body page in which coding is done*/
+font-size:30px;  /*The font size of header is 30 pixels*/
+text-align:center;   /*All the text is aligned to the center*/
+font-family:Algerian;	
+color:#CC33FF;
+text-shadow:3px 3px 4px #006666;
+background-color:#CCFFCC;   /*the background color is set using this particular CSS code*/
+}
+nav ul{            /*All the coding done from line 16 to line 41 is to beautify the navigation bar of the website*/
+list-style-type: none;
+float:left;
+width:16%; 
+position:fixed;
+overflow:auto;	
+}
+nav ul li{	
+background-color:Yellow;
+}
+nav ul li a{
+display:block;	
+text-align:center;	
+font-size:25px;
+text-decoration:none;
+padding:5px;
+color:black;
+}
+li a:hover {          /*this is done to provide the navigation bar some of the animations whenever the user points the mouse over the navigator elements*/
+    background-color: #555;
+    color: white;
+}
+li a.active{  /*This kind of code is written in order to highlight the navigator corresponding to the current webpage*/
+	background-color:black;
+    color: white;
+}
+main{         /*This is the main section of the body*/
+width:50%;      /*The width of the main section is to 50% of the screen*/
+margin-left:22%;
+background-color:white;
+color:black;
+padding-left:1%;
+padding-right:1%;
+border:2px solid black;
+margin-bottom:3%;	
+}
+article#intro{         /*This element is to provide some special effects to the article section of the ABOUT US page*/
+border:2px groove grey;
+padding:5px;
+margin:3%;
+box-shadow :.4em .4em grey;	
+}
+h2{        /*This section defines the styles of all the h2 elements present in the Website*/
+text-align:center;	
+text-decoration:underline;
+}
+img{      /*Thsi is to add some effects in the images available in this website*/
+border:1px solid brown;	
+}	
+div.sunshine,div.richmond,div.parkdale,div.footscray,div.hawthorn,div.collingwood,div.kew,div.bruno{   /*The coding is done here in order to add some qualities in all the pizzas specifications listed in the Home page of this website*/
+width:300px;
+height:400px;
+float:left;
+background-color:#FFFFCC;
+border:2px groove grey;
+padding:5px;	
+text-align:center;
+margin:7px;
+}
+aside{    /*This is the aside part of the body and css codes to make it look wonderful*/
+width:20%;
+margin-left:77%;	
+margin-bottom:10px;
+background-color:lightblue;
+padding:1%;
+border:2px solid grey;	
+}
+footer{     /*This is the footer part of the website which tells about the copyright and the css codes to beautify the footer section*/
+clear:both;
+font-size:20px;
+text-align:center;
+padding:10px;
+background-color:#E0E0E0; 
+border:2px solid #6699CC;	
+}
+
+
+/*These all are the form div elements and standard codes are written in order to seperate them and maintain decent space between them*/
+.name,.gender,.mobile,.age,.gavourites,.rank,.email,.Password,.daddress,.baddress,.houseno1,.city1,.state1,.street1,.postcode1.houseno2,.city2,.state2,.street2,.postcode2,.verification,.cardtype,.cardname,.cardnumber,.validtill,.Con_Password{
+margin-top:5px;
+margin-bottom:5px;
+padding:10px;	
+}
+.verification{   
+border: 2px solid black;    /*This sets the border to 2 pixels black color*/
+background-color: #FFCC66;	/*This sends the background color of the div element for the Same as delivery address checkbox*/
+}
+.bill{   /*This is the bill section of the Order page in which when a user selects all the pizzas and press OK, this div sections comes up with the customer's total bill*/
+border: 2px solid black;
+padding:5px;  /*This creates the padding between the elments which is set to be 5px*/
+margin-top:10px;	
+background-color:#00FFFF;
+display:none;     /*Initially when the window is loaded this section is not displayed with the help of this code*/
+}
+.imp{
+	font-size:18px;
+}
+.button {   /*CSS codes are written in order to give the OK section of the bill fieldset a button look*/
+	border           		:1px solid black;
+	border-radius    		:6px;
+	background-color 		:lightgrey;
+	padding          		:0.25em; 				/* Creates spacing around the text */
+}
+select{
+width:200px;
+background-color:#f1f1f1;
+border-radius:4px;
+padding:16px 20px;	
+}
+.info1,.info2,.info3,.info4,.info5,.info6,.info7{  
+font-size:20px;    /*The font size of the legend of all fieldsets is set to 20px*/
+}
+.field1,.field2,#delivery,.field4,.field5,.field6,.field7{
+border:solid;
+margin-top:10px;	/*This code creates the space between two two fieldsets*/
+}
+.field3,.field6,#baddress{
+display:none;     /*These parts of the fieldsets are not displayed initially when the window is loaded*/
+}
+p.final{
+text-align:center;
+Padding:10px;	
+}
+table,tr,td,th {       /*This section is to provide some separations and borders of the table elements of the Home page*/
+	border: 1px solid black;
+	padding:8px;
+	text-align:center;
+}
+#q1,#q2,#q3,#q4,#q5,#q6,#q7,#q8{   /*Thses are all the quantity section which are not displayed initially. It is displayed only when user checks the checkbox provided for that particular pizza and then a quantity input field is shown so that the user can input the number of pizzas they wanna order*/
+display:none;	
+}
+.intro,#a1,#a2,.g1,.g2{
+	font-size:18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
