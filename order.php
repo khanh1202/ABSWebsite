@@ -9,7 +9,15 @@
   
 	<title>ABS | Order</title>
 </head>
-<body> <!--This is the Order page of Bruno Pizzeria from which the customers can order the pizza online-->
+<body> 
+<?php
+	session_start();
+	if (!isset($_SESSION["verify"]))
+	 die("<p>Please login first<a href=login.php>   Login</a></p>");
+	else
+		session_destroy();
+?>
+<!--This is the Order page of Bruno Pizzeria from which the customers can order the pizza online-->
 <header>
 <h1>ORDER BURGER ONLINE</h1>
 </header>
@@ -18,7 +26,7 @@
     <li><a href="index.html">HOME</a></li>
 	<li><a href="about.html">ABOUT US</a></li>
 	<li><a href="registration.html">SIGN UP</a></li>
-	<li><a class="active" href="order.html">ORDER BURGER</a></li>
+	<li><a class="active" href="login.php">ORDER BURGER</a></li>
   </ul>	 
 </nav>
 <main>
