@@ -1,13 +1,18 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['verify']))
+        header("location: error.htm");
+?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />	
+	<meta charset="utf-8" />
 	<meta name="description" content="Web development" />
 	<meta name="keywords"    content="Registration Form" />
 	<meta name="author"      content="DP1 Team" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
   	
-	<title>Web Development Assignment 2</title>
+	<title>ABS | Order</title>
 
 	<script src="JavaScript/order.js"></script>
 </head>
@@ -19,8 +24,9 @@
   <ul>
     <li><a href="index.html">HOME</a></li>
 	<li><a href="about.html">ABOUT US</a></li>
-	<li><a href="registration.html">SIGN UP</a></li>
-	<li><a class="active" href="order.html">ORDER BURGER</a></li>
+	<li><a href="registration.php">SIGN UP</a></li>
+	<li><a class="active" href="order.php">ORDER BURGER</a></li>
+      <li><a href="logout.php">LOG OUT</a></li>
   </ul>	 
 </nav>
 <main>
@@ -102,7 +108,6 @@ value="ABS Special Burger" id="bruno" />ABS Special Burger    &nbsp;&nbsp;&nbsp;
 		  <input id="v3" type="text" name="postdel" maxlength="4" size="4"/> </div>
 		  </div>
 		  </fieldset>
-		  
 		  <p class="final">
 <input type="submit" value="Submit" name="submitbutton" />
 <input type="reset" value="Reset" />

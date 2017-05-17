@@ -24,8 +24,9 @@
   <ul>
     <li><a href="index.html">HOME</a></li>
 	<li><a href="about.html">ABOUT US</a></li>
-	<li><a class="active" href="registration.html">SIGN UP</a></li>
-	<li><a href="order.html">ORDER PIZZA</a></li>
+	<li><a class="active" href="registration.php">SIGN UP</a></li>
+	<li><a href="order.php">ORDER PIZZA</a></li>
+      <li><a href="logout.php">LOG OUT</a></li>
   </ul>	 
 </nav>
 <main>
