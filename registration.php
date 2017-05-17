@@ -42,7 +42,7 @@
  <fieldset>
   <legend>Gender:</legend>
  <div class="gender">
-<input type="radio" name="gender" value="Male" id="r5" />Male
+<input type="radio" name="gender" value="Male" id="r5" checked="checked"/>Male
 <input type="radio" name="gender" value="Female" id="r6" />Female
 </div>
 </fieldset>
@@ -102,6 +102,42 @@ value="Bruno Special Pizza" />Bruno Special Pizza
  </div>
  
  </fieldset>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        if (isset($_POST["fname"]) || isset($_POST["emailContact"]) || isset($_POST["Password"]) || isset($_POST["gender"]) || isset($_POST["DOB"]) || isset($_POST["Mobile_Number"]) || isset($_POST["rank"]) || isset($_POST["Con_Password"]))
+        {
+            $fullname = $_POST["fname"];
+            $email = $_POST["emailContact"];
+            $userPass = $_POST["Password"];
+            $gender = $_POST["gender"];
+            $dob = $_POST["DOB"];
+            $mobile = $_POST["Mobile_Number"];
+            $rank = $_POST["rank"];
+            $conpassword = $_POST["Con_Password"];
+        }
+
+        if (empty($fullname) || empty($email) || empty($userPass) || empty($conpassword))
+        {
+            echo "<p>Please fill all required fields</p>";
+        }
+        else
+        {
+            $query_verify = "select * from ABSCustomer WHERE email='$email'";
+            $query_insert = "INSERT INTO ABSCustomer (name, email, password, gender, dob) VALUES ('$fullname', '$email', '$userPass', '$gender', '$dob')";
+            $do_verify = @mysqli_query($connect, $query_verify);
+            if ($rowquery = mysqli_fetch_assoc($do_verify))
+                echo "Your email has been used before";
+            else
+            {
+                mysqli_query($connect, $query_insert);
+                mysqli_close($connect);
+                echo "<p>Your registration is successful</p>";
+            }
+
+        }
+    }
+    ?>
 <p class="final">
 <input type="submit" value="Submit" />
 <input type="reset" value="Reset" />
@@ -113,17 +149,4 @@ value="Bruno Special Pizza" />Bruno Special Pizza
 <p>The contents of this website are protected by <strong>copyright&copy; law.</strong> Copyright in this material resides with the Commonwealth of Australia or various other rights holders, as indicated. Abhishek Mishra is the developer of this website as well the content provided in this website.</p>
 </footer>
 </body>
-<?php
-	if ($_SERVER["REQUEST_METHOD"] == "POST")
-	{
-		$fullname = $_POST["fname"];
-		$email = $_POST["emailContact"];
-		$userPass = $_POST["Password"];
-		$gender = $_POST["gender"];
-		$dob = $_POST["DOB"];
-		$query = "INSERT INTO ABSCustomer (name, email, password, gender, dob) VALUES ('$fullname', '$email', '$userPass', '$gender', '$dob')";
-		mysqli_query($connect, $query);
-		mysqli_close($connect);
-	}
-?>
 </html>
