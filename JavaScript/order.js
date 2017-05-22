@@ -59,16 +59,18 @@ function Bill () {      /*This function is to calculate the total bill of the us
 	var array1 = [sun,haw,rich,col,park,kew,foot,bruno];
 	var array2 = [q1,q2,q3,q4,q5,q6,q7,q8];
 	var array3 = [13.60,13.85,13.50,14.10,13.90,14.55,12.90,15.00];
+	total.style.display = "block";
+   answer.value = calculateTotal(array2,array3);	
+}
+
+function calculateTotal(quant, price)
+{
 	var a = 0.00;
 	
-	
-	total.style.display = "block";
 	for (var i=0; i<8; i++) {              /*This function calculates the total bill of the customer*/
-	if (array1[i].checked) {
-	a += array2[i].value*array3[i];
+		a += quant[i].value*price[i];
 	}
-	}
-   answer.value = "$"+a;	
+	return "$"+a;
 }
 
 function init () {     /*This is the initialisation function which is automatically called when the window is loaded*/
